@@ -1,0 +1,17 @@
+{
+  "name": "babel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "core-js": "^3.45.0"
+  }
+}
