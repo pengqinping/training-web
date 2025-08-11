@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery Moblie 页面</title>
+    <link rel="stylesheet" href="../lib/jquery.mobile-1.4.5.min.css">
+    <!-- jquery js 不能在 jquerymoblie 后面导入，否则无法识别-->
+    <script src="../lib/jquery-2.1.4.min.js"></script>
+    <script src="../lib/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <a href="link" data-role="button" data-icon="home">home</a>
+
+        <h1>Welcome To My Homepage</h1>
+        <a href="link" data-role="button" data-icon="search">search</a>
+    </div>
+    <div date-role="content">
+        <h1>empty content</h1>
+        <a href="#pagetwo" data-role="button" data-icon="arrow-l" data-transition="slide">如果 header只有一个按钮，如何显示在右边</a>
+
+
+        定位头部栏和尾部栏 <br/>
+        头部和尾部可以通过三种方式进行定位：<br/>
+        Inline - 默认。头部栏和尾部栏与页面内容内联。<br/>
+        Fixed - 头部栏和尾部栏固定在页面的顶部和底部。<br/>
+        Fullscreen - 与 Fixed
+        定位模式基本相同，头部栏和尾部栏固定在页面的顶部和底部。但是当他工具栏滚动出屏幕之外时，不会自动重新显示，除非点击屏幕，这对于图片或视频类有提升代入感的应用是非常有用的。注意这种模式下工具栏会遮住页面内容，所以最好用在比较特殊的场合下。<br/>
+
+        <div data-role="controlgroup">
+            <a href="#pageInline" data-role="button">Inline Test</a>
+            <a href="#pageFixed" data-role="button">Fixed Test</a>
+            <a href="#pageFullscreen" data-role="button">Fullscreen Test</a>
+        </div>
+
+    </div>
+    <div data-role="footer">
+        <a href="#" data-role="button">在 Facebook上关注我</a>
+        <a href="#" data-role="button">在Twitter上关注我</a>
+        <a href="#" data-role="button">在Instagram上关注我</a>
+    </div>
+</div>
+<div data-role="page" id="pagetwo">
+    <div data-role="header">
+        <h1>This is pageTwo</h1>
+        <!-- 如果屏蔽 h1 前面的图标 search图标就会显示在home的位置，所以我们可以通过 -->
+        <a href="#" data-role="button" data-icon="search" class="ui-btn-right">搜索</a>
+    </div>
+    <div date-role="content">
+        <h1>empty content</h1>
+        <a href="#pageone" data-role="button" data-rel="back" data-transition="slide" data-direction="reverse">返回上一层</a>
+    </div>
+    添加ui-btn属性让按钮居中 <br/>
+
+    <div data-role="footer" class="ui-btn">
+        <div data-role="controlgroup" data-type="horizontal">
+            <a href="#" data-role="button" data-icon="plus">在 Facebook上关注我</a>
+            <a href="#" data-role="button" data-icon="plus">在Twitter上关注我</a>
+            <a href="#" data-role="button" data-icon="plus">在Instagram上关注我</a>
+        </div>
+    </div>
+</div>
+
+<!--page three-->
+
+<div id="pageInline" data-role="page">
+    <div data-role="header" data-position="inline">
+        <p>PageInline</p>
+    </div>
+    <div data-role="content">
+        <p>PageInline</p>
+    </div>
+    <div data-role="footer" data-position="inline">
+        <p>PageInline</p>
+    </div>
+</div>
+
+<div id="pageFixed" data-role="page">
+    <div data-role="header" data-position="fixed">
+        <p>pageFixed</p>
+    </div>
+    <div data-role="content">
+        <p>pageFixed</p>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <p>pageFixed</p>
+    </div>
+</div>
+
+<div id="pageFullscreen" data-role="page">
+    <div data-role="header" data-position="fixed" data-fullscreen="true">
+        <p>pageFullScreen 固定定位和全屏定位中，通过点击屏幕将隐藏和显示头部栏和尾部栏</p>
+    </div>
+    <div data-role="content">
+        <p>pageFullScreen</p>
+    </div>
+    <div data-role="footer" data-position="fixed" data-fullscreen="true">
+        <p>pageFullScreen</p>
+    </div>
+</div>
+</body>
+</html>

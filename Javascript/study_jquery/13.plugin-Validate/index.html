@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<meta>
+<meta charset="utf-8">
+<script src="../lib/jquery-2.1.4.min.js">
+</script>
+<script src="../lib/jquery.metadata.js"></script>
+<script src="../lib/jquery.validate.js"></script>
+<!-- messages_cn.js 要在metadata.js和 validata.js后面引入，否则没有效果-->
+<script src="messages_cn.js"></script>
+<style type="text/css">
+
+</style>
+<script>
+    $().ready(function() {
+        $("#signupForm").validate();
+    });
+</script>
+</head>
+<body>
+<pre>
+    相关API
+
+
+</pre>
+
+<form id="signupForm" method="get" action="">
+    <p>
+        <label for="firstname">Firstname</label>
+        <input id="firstname" name="firstname" class="required" />
+    </p>
+    <p>
+        <label for="email">E-Mail</label>
+        <input id="email" name="email" class="required email" />
+    </p>
+    <p>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" class="{required:true,minlength:5}" />
+    </p>
+    <p>
+        <label for="confirm_password">确认密码</label>
+        <input id="confirm_password" name="confirm_password" type="password" class="{required:true,minlength:5,equalTo:'#password'}" />
+    </p>
+    <p>
+        <input class="submit" type="submit" value="Submit"/>
+    </p>
+</form>
+
+</body>
+
+
+</html>

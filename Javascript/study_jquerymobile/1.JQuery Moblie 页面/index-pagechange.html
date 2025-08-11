@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery Moblie 页面</title>
+    <link rel="stylesheet" href="../lib/jquery.mobile-1.4.5.min.css">
+    <!-- jquery js 不能在 jquerymoblie 后面导入，否则无法识别-->
+    <script src="../lib/jquery-2.1.4.min.js"></script>
+    <script src="../lib/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>Welcome To My Homepage</h1>
+    </div>
+
+    <div data-role="content">
+        <p>Welcome!</p>
+        <!--这里设置data-rel表示以dialog的形式打开 PageTwo -->
+        <a href="#pagetwo" data-rel="dialog">Go to Page Two</a>
+    </div>
+
+    <div data-role="footer">
+        <h1>Footer Text</h1>
+    </div>
+</div>
+
+<div data-role="page" id="pagetwo">
+    <div data-role="header">
+        <h1>Welcome To My Homepage</h1>
+    </div>
+
+    <div data-role="content">
+        <p>Goodbye!</p>
+        <a href="#pageone">Go to Page One</a>
+    </div>
+
+    <div data-role="footer">
+        <h1>Footer Text</h1>
+    </div>
+</div>
+</body>
+</html>

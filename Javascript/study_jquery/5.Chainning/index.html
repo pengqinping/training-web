@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<meta>
+<meta charset="utf-8">
+<script src="../lib/jquery-2.1.4.min.js">
+</script>
+<script>
+    $(document).ready(function () {
+        $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+    });
+</script>
+</head>
+<body>
+<pre>
+    相关API
+   直到现在，我们都是一次写一条 jQuery 语句（一条接着另一条）。不过，有一种名为链接（chaining）的技术，允许我们在相同的元素上运行多条 jQuery 命令，一条接着另一条。
+</pre>
+
+<p id="p1">测试</p>
+</body>
+
+</html>

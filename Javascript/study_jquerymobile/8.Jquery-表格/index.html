@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery Moblie 页面</title>
+    <link rel="stylesheet" href="../lib/jquery.mobile-1.4.5.min.css">
+    <!-- jquery js 不能在 jquerymoblie 后面导入，否则无法识别-->
+    <script src="../lib/jquery-2.1.4.min.js"></script>
+    <script src="../lib/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        .ui-block-a,
+        .ui-block-b,
+        .ui-block-c {
+            background-color: lightgray;
+            border: 1px solid black;
+            height: 190px;
+            font-weight: bold;
+            text-align: center;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>欢迎来到我的主页</h1>
+    </div>
+
+    <div data-role="content">
+        <div class="ui-grid-d">
+            <div class="ui-block-a"><a href="#" data-role="button">第一列</a><br>
+                <span>第一列：This is some text. This is some text. This is some text. This is some text. This is some text.</span>
+            </div>
+            <div class="ui-block-b">
+                <a href="#" data-role="button">第二列</a><br>
+                <span>第二列：This is some text. This is some text. This is some text. This is some text.</span>
+            </div>
+            <div class="ui-block-c">
+                <a href="#" data-role="button">第三列</a><br>
+                <span>第三列：This is some text. This is some text. This is some text. This is some text.</span>
+            </div>
+            <div class="ui-block-d">
+                <a href="#" data-role="button">第四列</a><br>
+                <span>第四列：This is some text. This is some text. This is some text. This is some text.</span>
+            </div>
+            <div class="ui-block-e">
+                <a href="#" data-role="button">第五列</a><br>
+                <span>第五列：This is some text. This is some text. This is some text. This is some text.</span>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+</body>
+</html>

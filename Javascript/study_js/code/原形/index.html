@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>__proto__ & prototype</title>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <script lang="javascript">
+          function SuperType() {
+          this.name = "super"
+      }
+
+      SuperType.prototype.printSuperName = function(){
+          console.log('super:' + this.name);
+      }
+
+      function SubType () {
+          this.name = "sub"
+      }
+
+      SubType.prototype.printSubName = function(){
+          console.log('Sub:' + this.name);
+      }
+
+      var sub = new SubType()
+    </script>
+  </body>
+</html>

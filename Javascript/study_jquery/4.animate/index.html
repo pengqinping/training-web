@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<meta>
+<meta charset="utf-8">
+<script src="../lib/jquery-2.1.4.min.js">
+</script>
+<script>
+    $(document).ready(function(){
+        $("#button1").click(function(){
+            $("#div1").animate({
+                left:'250px',
+                opacity:'0.5',
+                height:'150px',
+                width:'150px'
+            });
+
+            $("#button2").click(function(){
+                $("#div2").animate({
+                    left:'250px',
+                    height:'+=150px',
+                    width:'+=150px'
+                });
+            });
+
+            $("#button3").click(function(){
+                $("#div3").animate({
+                    height:'toggle'
+                });
+            });
+
+            $("#button4").click(function(){
+                var div=$("#div4");
+                div.animate({height:'300px',opacity:'0.4'},"slow");
+                div.animate({width:'300px',opacity:'0.8'},"slow");
+                div.animate({height:'100px',opacity:'0.4'},"slow");
+                div.animate({width:'100px',opacity:'0.8'},"slow");
+            });
+
+        });
+    });
+</script>
+</head>
+<body>
+<pre>
+    相关API
+    $(selector).animate({params},speed,callback);
+
+    必需的 params 参数定义形成动画的 CSS 属性。
+    可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+    可选的 callback 参数是动画完成后所执行的函数名称。
+
+    $(selector).stop(stopAll,goToEnd);
+    jQuery stop() 方法用于停止动画或效果，在它们完成之前。stop() 方法适用于所有 jQuery 效果函数，包括滑动、淡入淡出和自定义动画。
+    可选的 stopAll 参数规定是否应该清除动画队列。默认是 false，即仅停止活动的动画，允许任何排入队列的动画向后执行。
+    可选的 goToEnd 参数规定是否立即完成当前动画。默认是 false。
+    因此，默认地，stop() 会清除在被选元素上指定的当前动画。
+</pre>
+<h2>操作多个属性</h2>
+<button id="button1">Start Animation</button>
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+<div id="div1" style="background:#98bf21;height:100px;width:100px;position:absolute;">
+</div>
+
+<h2>jQuery animate() - 使用相对值</h2>
+<button id="button2">Start Animation</button>
+<div id="div2" style="background:#7fbf9c;height:100px;width:100px;position:absolute;">
+</div>
+
+<h2>jQuery animate() - 使用预定义的值 您甚至可以把属性的动画值设置为 "show"、"hide" 或 "toggle"：</h2>
+<button id="button3">Start Animation</button>
+<div id="div3" style="background:#2e72bf;height:100px;width:100px;position:absolute;">
+</div>
+
+<h2>jQuery animate() - 使用队列功能</h2>
+<button id="button4">Start Animation</button>
+<div id="div4" style="background:#bfbe9e;height:100px;width:100px;position:absolute;">
+</div>
+</body>
+
+</html>

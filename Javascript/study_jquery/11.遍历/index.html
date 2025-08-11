@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<meta>
+<meta charset="utf-8">
+<script src="../lib/jquery-2.1.4.min.js">
+</script>
+<style type="text/css">
+
+</style>
+<script>
+
+</script>
+</head>
+<body>
+<pre>
+    相关API
+    parent() 方法返回被选元素的直接父元素。
+    parents() 方法返回被选元素的所有祖先元素，它一路向上直到文档的根元素 (&gl;html&gt;)。
+    parentsUntil() 方法返回介于两个给定元素之间的所有祖先元素。
+</pre>
+
+<div id="divParent">
+    <button id="btnParnet">Parent Test</button>
+</div>
+
+<div>
+    <p>first div</p>
+
+    <div id="divParents">
+        <p>second div</p>
+
+        <div id="threeDiv">
+            <p>three div</p>
+            <button id="btnParnets">Parents Test</button>
+            <button id="btnParnetUntils">Parent Test</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="descendants" style="width:500px;">div (current element)
+    <p class="1">p (child)
+        <span>span (grandchild)</span>
+    </p>
+    <p class="2">p (child)
+        <span>span (grandchild)</span>
+    </p>
+</div>
+
+<button id="btnchildren">Children Test</button>
+<button id="btnFind">Find Test</button>
+
+<script>
+    $(document).ready(function () {
+        $("#btnParnet").click(function () {
+            $("#btnParnet").parent().css({"color": "red", "border": "2px solid red"});
+        });
+        $("#btnParnets").click(function () {
+            $("#btnParnets").parents().css({"color": "red", "border": "2px solid red"});
+        });
+
+        $("#btnParnetUntils").click(function () {
+            $("#btnParnetUntils").parentsUntil("#divParents").css({"color": "red", "border": "2px solid red"});
+        });
+
+        $("#btnchildren").click(function () {
+            $(".descendants").children("p.1").css({"color":"red","border":"2px solid red"});
+        });
+
+        $("#btnFind").click(function(){
+            $(".descendants").find("span").css({"color":"red","border":"2px solid red"});
+        });
+
+    });
+</script>
+</body>
+
+
+</html>

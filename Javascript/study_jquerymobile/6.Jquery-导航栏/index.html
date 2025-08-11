@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery Moblie 页面</title>
+    <link rel="stylesheet" href="../lib/jquery.mobile-1.4.5.min.css">
+    <!-- jquery js 不能在 jquerymoblie 后面导入，否则无法识别-->
+    <script src="../lib/jquery-2.1.4.min.js"></script>
+    <script src="../lib/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page">
+    <div data-role="header">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="home">主页Home</a></li>
+                <li><a href="#" data-icon="arrow-r">第二页</a></li>
+                <li><a href="#" data-icon="search">搜索</a></li>
+            </ul>
+        </div>
+        <h1>欢迎来到我的主页</h1>
+    </div>
+
+    <div data-role="content">
+        <p>对于多个页面，您可能想要每个按钮的选中外观代表当前用户所在的页面。要做到这一点，请添加 "ui-state-persist" 和 "ui-btn-active" 到链接的 class：</p>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="home" class="ui-btn-active ui-state-persist">主页Home</a></li>
+                <li><a href="#" data-icon="arrow-r">第二页</a></li>
+                <li><a href="#" data-icon="search">搜索</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+
+</body>
+</html>

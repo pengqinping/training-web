@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<meta>
+<meta charset="utf-8">
+<script src="../lib/jquery-2.1.4.min.js">
+</script>
+<script>
+
+</script>
+</head>
+<body>
+<pre>
+    相关API
+    remove() - 删除被选元素（及其子元素）
+    empty() - 从被选元素中删除子元素
+    jQuery remove() 方法也可接受一个参数，允许您对被删元素进行过滤。
+
+</pre>
+
+<div id="remove"  style="background: #788079;width: 100px;height: 100px;">
+    <ol>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+    </ol>
+</div>
+<button id="btnRemove">Remove Test</button>
+<div id="empty" style="background: #225a80;width: 100px;height: 100px;">
+    <ol>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+        <li>item5</li>
+    </ol>
+</div>
+<button id="btnEmpty">Empty Test</button>
+
+<ol id="removehasParams">
+    <li class="item-1">item1</li>
+    <li class="item-2">item2</li>
+    <li class="item-3">item3</li>
+    <li class="item-4">item4</li>
+    <li class="item-5">item5</li>
+</ol>
+<button id="btnRemoveWithParams">RemoveWithParams class equals is item-1</button>
+<script>
+    $(document).ready(function(){
+        $("#btnRemove").click(function(){
+            $("#remove").remove();
+        });
+        $("#btnEmpty").click(function(){
+            $("#empty").empty();
+        });
+
+        $("#btnRemoveWithParams").click(function(){
+             $("li").remove(".item-1");
+        });
+    });
+</script>
+</body>
+
+
+</html>

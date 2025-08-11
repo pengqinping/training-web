@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery Moblie 页面</title>
+    <link rel="stylesheet" href="../lib/jquery.mobile-1.4.5.min.css">
+    <!-- jquery js 不能在 jquerymoblie 后面导入，否则无法识别-->
+    <script src="../lib/jquery-2.1.4.min.js"></script>
+    <script src="../lib/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>欢迎来到我的主页</h1>
+    </div>
+
+    <div data-role="content">
+        如需创建一个可折叠的内容块，需要为容器添加 data-role="collapsible" 属性。在容器（div）内，添加一个标题元素（H1-H6），后跟您想要进行扩展的 HTML 标记：
+        默认情况下，内容是被折叠起来的。如需在页面加载时展开内容，请使用 data-collapsed="false"：
+        <div data-role="collapsible" data-collapsed="false">
+            <h1>点击我 - 我可以折叠！</h1>
+
+            <p>我是可折叠的内容。</p>
+
+            <div data-role="collapsible">
+                <h1>点击我 - 我是嵌套的可折叠块！</h1>
+
+                <p>我是嵌套的可折叠块中被展开的内容。</p>
+            </div>
+        </div>
+
+        <h2>可折叠集合</h2>
+        data-role="collapsible-set" <br/>
+        <div data-role="collapsible-set">
+            <div data-role="collapsible">
+                <h1>点击我 - 我可以折叠！</h1>
+                <p>我是被展开的内容。</p>
+            </div>
+            <div data-role="collapsible">
+            <h1>点击我 - 我可以折叠!</h1>
+            <p>我是被展开的内容。</p>
+        </div>
+        </div>
+    </div>
+
+    <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+</body>
+</html>

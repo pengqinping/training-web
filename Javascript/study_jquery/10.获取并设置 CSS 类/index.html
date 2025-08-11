@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<meta>
+<meta charset="utf-8">
+<script src="../lib/jquery-2.1.4.min.js">
+</script>
+<style type="text/css">
+    .important{
+        font-weight: bold;
+        font-size: xx-large;
+    }
+    .blue{
+        color: blue;
+    }
+</style>
+<script>
+    $(document).ready(function(){
+        $("#btnAddclass").click(function () {
+            $("#p1,#p2").addClass("important");
+            $("#p3").addClass("blue");
+            $("#p4").addClass("important blue");
+
+        });
+
+        $("#btnCss").click(function(){
+            alert("------");
+            alert("dddd"+$("#p1").css("color"));
+        });
+    });
+</script>
+</head>
+<body>
+<pre>
+    相关API
+    jQuery 拥有若干进行 CSS 操作的方法。我们将学习下面这些：
+
+    addClass() - 向被选元素添加一个或多个类
+    removeClass() - 从被选元素删除一个或多个类
+    toggleClass() - 对被选元素进行添加/删除类的切换操作
+
+    css() - 设置或返回样式属性
+    如需返回指定的 CSS 属性的值，请使用如下语法：css("propertyname");
+    如需设置指定的 CSS 属性，请使用如下语法：css("propertyname","value");
+    如需设置多个 CSS 属性，请使用如下语法：css({"propertyname":"value","propertyname":"value",...});
+</pre>
+
+<div id="addclass">
+    <p id="p1">this is p1</p>
+    <p id="p2">this is p2</p>
+    <p id="p3">this is p3</p>
+    <p id="p4">this is p4</p>
+    <button id="btnAddclass">Add class Test </button>
+
+    <button id="btnCss">Css Test </button>
+
+</div>
+
+</body>
+
+
+</html>

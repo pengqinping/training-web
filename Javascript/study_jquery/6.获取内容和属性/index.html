@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<meta>
+<meta charset="utf-8">
+<script src="../lib/jquery-2.1.4.min.js">
+</script>
+<script>
+    $(document).ready(function () {
+        $("#btn1").click(function () {
+            alert("Text: " + $("#test").text());
+        });
+        $("#btn2").click(function () {
+            alert("HTML: " + $("#test").html());
+        });
+        $("#btn3").click(function(){
+            alert("Value: " + $("#name").val());
+        });
+        $("#btn4").click(function(){
+            alert($("#w3s").attr("href"));
+        });
+    });
+</script>
+</head>
+<body>
+<pre>
+    相关API
+    jQuery 中非常重要的部分，就是操作 DOM 的能力。
+    jQuery 提供一系列与 DOM 相关的方法，这使访问和操作元素和属性变得很容易。
+
+    获得内容 - text()、html() 以及 val()
+    三个简单实用的用于 DOM 操作的 jQuery 方法：
+    text() - 设置或返回所选元素的文本内容
+    html() - 设置或返回所选元素的内容（包括 HTML 标记）
+    val() - 设置或返回表单字段的值
+
+</pre>
+<p id="test">This is some <b>bold</b> text in a paragraph.</p>
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+    <button id="btn3">Show Values</button>
+<input type="goodBoy" id="name" placeholder="dddd"/>
+    <button id="btn4">Get attrs</button>
+<a href="ddd" id="w3s"></a>
+<br/>
+
+<pre>
+    设置内容 - text()、html() 以及 val()
+    上面的三个 jQuery 方法：text()、html() 以及 val()，同样拥有回调函数。回调函数由两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串。
+    例子：text(function(i,origText){})
+</pre>
+
+<button id="btn41">insert 'hello world' Text</button>
+<br/>
+<button id="btn5">insert Hello world HTML</button>
+<br/>
+<button id="btn6">insert Dolly duck Values</button>
+<br/>
+<p id="test1"></p>
+<p id="test2"></p>
+<input type="text" id="test3"/>
+<script>
+    $("#btn41").click(function(){
+        $("#test1").text("Hello world!");
+    });
+    $("#btn5").click(function(){
+        $("#test2").html("<b>Hello world!</b>");
+    });
+    $("#btn6").click(function(){
+        $("#test3").val("Dolly Duck");
+    });
+</script>
+</body>
+
+
+</html>

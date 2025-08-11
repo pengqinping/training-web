@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<meta>
+<meta charset="utf-8">
+<script src="../lib/jquery-2.1.4.min.js">
+</script>
+
+<script src="../lib/chili-1.7.pack.js"></script>
+<script src="../lib/jquery.easing.js"></script>
+<script src="../lib/jquery.dimensions.js"></script>
+<script src="../lib/jquery.accordion.js"></script>
+<script>
+    jQuery().ready(function () {
+        // simple accordion
+        jQuery('#list1a').accordion();
+        jQuery('#list1b').accordion({
+            autoheight: false
+        });
+    });
+
+</script>
+<link rel="stylesheet" href="demo.css"/>
+<script>
+
+</script>
+</head>
+<body>
+<pre>
+    相关API
+
+
+</pre>
+<div id="main">
+
+    <fieldset>
+        <legend>标准的，容器是一个 div，标题是 h3，内容是 div 和嵌套的 p。</legend>
+
+        <h3>代码</h3>
+		<pre><code class="mix">jQuery('#list1a').accordion();
+            jQuery('#list1b').accordion({
+            autoheight: false
+            });</code></pre>
+
+        <div class="basic" style="float:left;" id="list1a">
+            <a>There is one obvious advantage:</a>
+
+            <div>
+                <p>
+                    You've seen it coming!<br/>
+                    Buy now and get nothing for free!<br/>
+                    Well, at least no free beer. Perhaps a bear,<br/>
+                    if you can afford it.
+                </p>
+            </div>
+            <a>Now that you've got...</a>
+
+            <div>
+                <p>
+                    your bear, you have to admit it!<br/>
+                    No, we aren't selling bears.
+                </p>
+            </div>
+            <a>Rent one bear, ...</a>
+
+            <div>
+                <p>
+                    get two for three beer.
+                </p>
+
+                <p>
+                    And now, for something completely different.<br/>
+                    And now, for something completely different.<br/>
+                    And now, for something completely different.<br/>
+                    And now, for something completely different.<br/>
+                    And now, for something completely different.<br/>
+                    And now, for something completely different.<br/>
+                    And now, for something completely different.<br/>
+                    And now, for something completely different.<br/>
+                    Period.
+                </p>
+            </div>
+        </div>
+
+        <div class="basic" style="float:left; margin-left: 2em;" id="list1b">
+            <a>There is one obvious advantage:</a>
+
+            <div>
+                <p>
+                    You've seen it coming!<br/>
+                    Buy now and get nothing for free!<br/>
+                    Well, at least no free beer. Perhaps a bear,<br/>
+                    if you can afford it.
+                </p>
+            </div>
+            <a>Now that you've got...</a>
+
+            <div>
+                <p>
+                    your bear, you have to admit it!<br/>
+                    No, we aren't selling bears.
+                </p>
+            </div>
+            <a>Rent one bear, ...</a>
+
+            <div>
+                <p>
+                    get two for three beer.
+                </p>
+
+                <p>
+                    And now, for something completely different.<br/>
+                    And now, for something completely different.<br/>
+                    And now, for something completely different.<br/>
+                    And now, for something completely different.<br/>
+                    And now, for something completely different.<br/>
+                    And now, for something completely different.<br/>
+                    And now, for something completely different.<br/>
+                    And now, for something completely different.<br/>
+                    Period.
+                </p>
+            </div>
+        </div>
+
+    </fieldset>
+</div>
+</body>
+
+
+</html>

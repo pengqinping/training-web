@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery Moblie 页面</title>
+    <link rel="stylesheet" href="../lib/jquery.mobile-1.4.5.min.css">
+    <!-- jquery js 不能在 jquerymoblie 后面导入，否则无法识别-->
+    <script src="../lib/jquery-2.1.4.min.js"></script>
+    <script src="../lib/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="pagetwo">
+    <div data-role="header">
+        <h1>Welcome To My Homepage</h1>
+    </div>
+
+    <div data-role="content">
+        如需添加图标到您的按钮，请使用 data-icon 属性：<br/>
+        <a href="#anylink" data-role="button" data-icon="search" >Search</a>
+        <a href="#anylink" data-role="button" data-icon="arrow-l">arrow-l</a>
+        <a href="#anylink" data-role="button" data-icon="arrow-r">arrow-r</a>
+        <a href="#anylink" data-role="button" data-icon="info">info</a>
+        <a href="#anylink" data-role="button" data-icon="home">home</a>
+        <a href="#anylink" data-role="button" data-icon="back">back</a>
+        <a href="#anylink" data-role="button" data-icon="grid">grid</a>
+
+        <p>定位图标:</p>
+        <a href="#link" data-role="button" data-icon="search" data-iconpos="top">顶部</a>
+        <a href="#link" data-role="button" data-icon="search" data-iconpos="right">右侧</a>
+        <a href="#link" data-role="button" data-icon="search" data-iconpos="bottom">底部</a>
+        <a href="#link" data-role="button" data-icon="search" data-iconpos="left">左侧</a>
+
+        <p>只带图片不带文字按钮</p>
+        <p><b>注意：</b> 将鼠标悬停在该图标上可以查看该工具提示文本：</p>
+        <a href="#link" data-role="button" data-icon="search" data-iconpos="notext">搜索</a>
+    </div>
+
+    <div data-role="footer">
+        <h1>Footer Text</h1>
+    </div>
+</div>
+</body>
+</html>

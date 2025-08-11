@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<meta>
+<meta charset="utf-8">
+<script src="../lib/jquery-2.1.4.min.js">
+</script>
+<script>
+    $(document).ready(function(){
+        $("#flip").click(function(){
+            $("#panel").slideDown("slow");
+        });
+
+        $("#flip1").click(function(){
+            $("#panel1").slideUp("slow");
+        });
+
+        $("#flip2").click(function(){
+            $("#panel2").slideToggle("slow");
+        });
+    });
+</script>
+
+<style type="text/css">
+    #panel,#flip,#panel1,#flip1,#panel2,#flip2
+    {
+        padding:5px;
+        text-align:center;
+        background-color:#e5eecc;
+        border:solid 1px #c3c3c3;
+    }
+    #panel
+    {
+        padding:50px;
+        display:none;
+    }
+    #panel1,#panel2{
+        padding:50px;
+    }
+</style>
+</head>
+<body>
+<pre>
+    相关API
+    $(selector).slideDown(speed,callback);
+    $(selector).slideUp(speed,callback);
+    $(selector).slideToggle(speed,callback);
+
+    可选的 speed 参数规定隐藏/显示的速度，可以取以下值："slow"、"fast" 或毫秒。
+    可选的 callback 参数是隐藏或显示完成后所执行的函数名称。
+</pre>
+<div id="flip">Click to slide down panel</div>
+<div id="panel">Hello world!</div>
+
+<div id="flip1">Click to slide up panel1</div>
+<div id="panel1"> panel1 Hello world!</div>
+
+<div id="flip2">Click to slide down panel2</div>
+<div id="panel2">panel2 Hello world!</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<meta>
+<meta charset="utf-8">
+<script src="../lib/jquery-2.1.4.min.js">
+</script>
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("#append1").append(" <b>Appended text</b>.");
+            $("#append2").append(" <b>Appended text</b>.");
+        });
+
+        $("#btn2").click(function(){
+            $("#ol1").append("<li>Appended item</li>");
+        });
+
+
+        $("#btn3").click(function(){
+            $("#append3").prepend(" <b>prepend text</b>.");
+            $("#append4").prepend(" <b>prepend text</b>.");
+        });
+
+        $("#btn4").click(function(){
+            $("#ol2").prepend("<li>prepend item</li>");
+        });
+
+        $("#btn5").click(function(){
+           $("#append5").after(" after");
+        });
+        $("#btn51").click(function(){
+           $("#append5").before(" before");
+        });
+
+        $("#btn6").click(function(){
+            $("#li3").after("<li> after item </li>");
+        });
+        $("#btn61").click(function(){
+            $("#li3").before("<li> before item </li>");
+        });
+    });
+</script>
+</head>
+<body>
+<pre>
+    相关API
+    append() - 在被选元素的结尾插入内容
+    prepend() - 在被选元素的开头插入内容
+    after() - 在被选元素之后插入内容
+    before() - 在被选元素之前插入内容
+
+</pre>
+<p id="append1">This is a paragraph.</p>
+<p id="append2">This is another paragraph.</p>
+<ol id="ol1">
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+</ol>
+<button id="btn1">Append text</button>
+<button id="btn2">Append list items</button>
+
+<p>测试prepend </p>
+<p id="append3">This is a paragraph.</p>
+<p id="append4">This is another paragraph.</p>
+<ol id="ol2">
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+</ol>
+<button id="btn3">prepend text</button>
+<button id="btn4">prepend list items</button>
+
+<p>after before test</p>
+<p id="append5">This is a paragraph.</p>
+<ol id="ol3">
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li id="li3">List item 3</li>
+</ol>
+<button id="btn5">after text</button>
+<button id="btn51">before text</button>
+<button id="btn6">after list items</button>
+<button id="btn61">before list items</button>
+
+
+
+<pre>
+    在上面的例子中，我们只在被选元素的开头/结尾插入文本/HTML。
+
+不过，append() 和 prepend() after() 和 before() 方法能够通过参数接收无限数量的新元素。可以通过 jQuery 来生成文本/HTML（就像上面的例子那样），或者通过 JavaScript 代码和 DOM 元素。
+</pre>
+
+<p id="testJ">This is a paragraph.</p>
+<button onclick="appendText()">Append text</button>
+<script>
+    function appendText()
+    {
+        var txt1="<p>Text.</p>";              // Create text with HTML
+        var txt2=$("<p></p>").text("Text.");  // Create text with jQuery
+        var txt3=document.createElement("p");
+        txt3.innerHTML="Text.";               // Create text with DOM
+        $("#testJ").append(txt1,txt2,txt3);        // Append new elements
+    }
+</script>
+</body>
+
+
+</html>

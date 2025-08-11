@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<meta>
+<meta charset="utf-8">
+<script src="../lib/jquery-2.1.4.min.js">
+</script>
+<script>
+    $(document).ready(function () {
+        $("#hide").click(function () {
+            $("p").hide(1000,function(){
+                console.log('hide success');
+            });
+        });
+        $("#show").click(function () {
+            $("p").show(1000,function(){
+                console.log('show success');
+            });
+        });
+        $("#toggle").click(function () {
+            $("p").toggle(2000,function(){
+                console.log('toggle success');
+            });
+        });
+    });
+</script>
+</head>
+<body>
+<pre>
+    相关API
+    $(selector).fadeIn(speed,callback);
+    $(selector).fadeOut(speed,callback);
+    $(selector).fadeToggle(speed,callback);
+
+    可选的 speed 参数规定隐藏/显示的速度，可以取以下值："slow"、"fast" 或毫秒。
+    可选的 callback 参数是隐藏或显示完成后所执行的函数名称。
+</pre>
+<p>如果你点击“隐藏” 按钮，我将会消失。</p>
+<button id="hide">隐藏</button>
+<button id="show">显示</button>
+<button id="toggle">toggle</button>
+</body>
+</html>
